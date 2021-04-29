@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0385457D4F66201BED2F4431 /* WLAsyncDisplay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLAsyncDisplay.podspec; path = ../WLAsyncDisplay.podspec; sourceTree = "<group>"; };
+		0385457D4F66201BED2F4431 /* WLAsyncDisplay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLAsyncDisplay.podspec; path = ../WLAsyncDisplay.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		494A15F16FACE1C064D6B8F7 /* Pods_WLAsyncDisplay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLAsyncDisplay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* WLAsyncDisplay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLAsyncDisplay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLAsyncDisplay'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of WLAsyncDisplay.'
 
 # This description is used to generate tags and improve search results.
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'iOS CoreText 异步绘制'
 
   s.homepage         = 'https://github.com/Weang/WLAsyncDisplay'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -30,10 +28,6 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WLAsyncDisplay/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WLAsyncDisplay' => ['WLAsyncDisplay/Assets/*.png']
-  # }
   s.swift_versions = "5.0"
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
 end
