@@ -1,0 +1,6 @@
+framework module WLAsyncDisplay {
+  umbrella header "WLAsyncDisplay-umbrella.h"
+
+  export *
+  module * { export * }
+}

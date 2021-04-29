@@ -1,0 +1,16 @@
+PODS:
+  - WLAsyncDisplay (0.1.0)
+
+DEPENDENCIES:
+  - WLAsyncDisplay (from `../`)
+
+EXTERNAL SOURCES:
+  WLAsyncDisplay:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WLAsyncDisplay: 1dab9760cc610a81383cd7003e9841da86816d43
+
+PODFILE CHECKSUM: 2daa10b43b1a510d1323c66504f4cd6607e02ad1
+
+COCOAPODS: 1.10.0

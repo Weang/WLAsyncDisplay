@@ -1,0 +1,6 @@
+framework module Pods_WLAsyncDisplay_Example {
+  umbrella header "Pods-WLAsyncDisplay_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
