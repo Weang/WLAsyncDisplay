@@ -56,7 +56,7 @@ open class WLAsyncDisplayLabel: UIView {
     var asyncDisplayLayer: WLAsyncDisplayLayer {
         return self.layer as! WLAsyncDisplayLayer
     }
-
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.contentsScale = UIScreen.main.scale

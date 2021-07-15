@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLAsyncDisplay'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A short description of WLAsyncDisplay.'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Weang/WLAsyncDisplay'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'w704444178@qq.com' => 'w704444178@qq.com' }
-  s.source           = { :git => 'https://github.com/Weang/WLAsyncDisplay.git', :tag => '1.0.1' }
+  s.source           = { :git => 'https://github.com/Weang/WLAsyncDisplay.git', :tag => '1.0.2' }
 
   s.ios.deployment_target = '9.0'
 

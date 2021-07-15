@@ -10,7 +10,7 @@ import UIKit
 typealias WLAsyncDisplayIsCanclledBlock = () -> (Bool)
 
 // 异步绘制任务代理
-protocol WLAsyncDisplayLayerDelegate: class {
+protocol WLAsyncDisplayLayerDelegate: AnyObject {
     // 即将要开始绘制
     func asyncDisplayLayerWillDisplay(layer: WLAsyncDisplayLayer)
     // 绘制的具体实现
