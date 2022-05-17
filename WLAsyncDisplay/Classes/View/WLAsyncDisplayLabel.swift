@@ -7,31 +7,27 @@
 
 import UIKit
 
-public protocol WLAsyncDisplayLabelDelegate: class {
-    
-    /// 图片加载完成后需要重新布局
-    func asyncDisplayViewShouldLayout(_ view: WLAsyncDisplayLabel)
+public protocol WLAsyncDisplayLabelDelegate: AnyObject {
     
     /// 点击高亮回调代理
-    func asyncDisplayView(_ view: WLAsyncDisplayLabel, didClickAtLink userInfo: [String: Any]?)
+    func asyncDisplayLabel(_ label: WLAsyncDisplayLabel, didClickAtLink userInfo: [String: Any]?)
     
     /// 点击截断文字回调代理
-    func asyncDisplayViewDidClickAtTruncation(_ view: WLAsyncDisplayLabel)
+    func asyncDisplayLabelDidClickAtTruncation(_ label: WLAsyncDisplayLabel)
     
     /// 点击正则高亮文字回调代理
     /// - Parameters:
     ///   - type: 正则类型
     ///   - content: 正则文字
-    func asyncDisplayView(_ view: WLAsyncDisplayLabel, didClickAtRegularExpression type: WLRegularExpression.RegularType, content: String)
+    func asyncDisplayLabel(_ label: WLAsyncDisplayLabel, didClickAtRegularExpression type: WLRegularExpression.RegularType, content: String)
     
 }
 
 extension WLAsyncDisplayLabelDelegate {
     
-    public func asyncDisplayViewShouldLayout(_ view: WLAsyncDisplayLabel) { }
-    public func asyncDisplayView(_ view: WLAsyncDisplayLabel, didClickAtLink userInfo: [String: Any]?) { }
-    public func asyncDisplayViewDidClickAtTruncation(_ view: WLAsyncDisplayLabel) { }
-    public func asyncDisplayView(_ view: WLAsyncDisplayLabel, didClickAtRegularExpression type: WLRegularExpression.RegularType, content: String) { }
+    public func asyncDisplayLabel(_ label: WLAsyncDisplayLabel, didClickAtLink userInfo: [String: Any]?) { }
+    public func asyncDisplayLabelDidClickAtTruncation(_ label: WLAsyncDisplayLabel) { }
+    public func asyncDisplayLabel(_ label: WLAsyncDisplayLabel, didClickAtRegularExpression type: WLRegularExpression.RegularType, content: String) { }
     
 }
 
@@ -42,24 +38,26 @@ open class WLAsyncDisplayLabel: UIView {
     // 是否异步绘制，默认是true
     public var displaysAsynchronously = true {
         didSet {
-            asyncDisplayLayer.displaysAsynchronously = displaysAsynchronously
+            asyncDisplayLayer?.displaysAsynchronously = displaysAsynchronously
         }
     }
     
     public var textNode: WLTextNode? {
         didSet {
-            self.layer.setNeedsDisplay()
+            asyncDisplayLayer?.textNode = textNode
+            layer.setNeedsDisplay()
             invalidateIntrinsicContentSize()
         }
     }
     
-    var asyncDisplayLayer: WLAsyncDisplayLayer {
-        return self.layer as! WLAsyncDisplayLayer
+    var asyncDisplayLayer: WLAsyncDisplayLayer? {
+        layer as? WLAsyncDisplayLayer
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.contentsScale = UIScreen.main.scale
+        asyncDisplayLayer?.contentView = self
     }
     
     required public init?(coder: NSCoder) {
@@ -76,12 +74,9 @@ open class WLAsyncDisplayLabel: UIView {
             super.touchesBegan(touches, with: event)
             return
         }
-        if let highlight = self.searchTextHighlightIn(node: textNode, touchPoint: touchPoint) {
-            textNode.textLayout?.highlightNodeOrgin = textNode.frame.origin
+        if let highlight = searchTextHighlightIn(node: textNode, touchPoint: touchPoint) {
             textNode.textLayout?.highlight = highlight
-        }
-        if textNode.textLayout?.highlight != nil {
-            displayHighlight()
+            displayImmediately()
         }
     }
     
@@ -91,36 +86,38 @@ open class WLAsyncDisplayLabel: UIView {
             return
         }
         let highlight = textNode?.textLayout?.highlight
-        textNode?.textLayout?.highlight = nil
-        displayHighlight()
         
-        if let value = highlight?.userInfo?[WLTruncationToken.highlightKey] as? Bool,
-           value {
-            delegate?.asyncDisplayViewDidClickAtTruncation(self)
-        } else if let key = highlight?.userInfo?.keys.first,
-                  let type = WLRegularExpression.RegularType.init(rawValue: key),
-                  let content = highlight?.userInfo?[type.rawValue] as? String {
-            delegate?.asyncDisplayView(self, didClickAtRegularExpression: type, content: content)
-        } else {
-            delegate?.asyncDisplayView(self, didClickAtLink: highlight?.userInfo)
+        textNode?.textLayout?.highlight = nil
+        displayImmediately()
+        
+        if let value = highlight?.userInfo?[WLAttributedStringKey.regularExpression.rawValue] as? Bool, value,
+           let type = highlight?.userInfo?["type"] as? String,
+           let regularType = WLRegularExpression.RegularType(rawValue: type),
+           let content = highlight?.userInfo?["content"] as? String {
+            delegate?.asyncDisplayLabel(self, didClickAtRegularExpression: regularType, content: content)
+            return
         }
+        if let value = highlight?.userInfo?[WLAttributedStringKey.truncationToken.rawValue] as? Bool, value {
+            delegate?.asyncDisplayLabelDidClickAtTruncation(self)
+            return
+        }
+        
+        delegate?.asyncDisplayLabel(self, didClickAtLink: highlight?.userInfo)
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         textNode?.textLayout?.highlight = nil
-        displayHighlight()
+        displayImmediately()
     }
     
     public func searchTextHighlightIn(node: WLTextNode, touchPoint: CGPoint) -> WLTextHighlight? {
-        guard let textLayout = node.textLayout else { return nil }
-        let nodeOrginPoint = node.frame.origin
-        for highlight in textLayout.textHighlights {
+        guard let textLayout = node.textLayout else {
+            return nil
+        }
+        for highlight in textLayout.textHighlights.reversed() {
             for position in highlight.positions {
-                let adjustRect = CGRect(x: position.origin.x + nodeOrginPoint.x,
-                                        y: position.origin.y + nodeOrginPoint.y,
-                                        width: position.size.width,
-                                        height: position.size.height)
+                let adjustRect = CGRect(x: position.origin.x, y: position.origin.y, width: position.size.width, height: position.size.height)
                 if adjustRect.contains(touchPoint) {
                     return highlight
                 }
@@ -129,33 +126,12 @@ open class WLAsyncDisplayLabel: UIView {
         return nil
     }
     
-    public func displayHighlight() {
-        asyncDisplayLayer.displayImmediately()
+    public func displayImmediately() {
+        asyncDisplayLayer?.displayImmediately()
     }
     
     public override var intrinsicContentSize: CGSize {
-        return textNode?.textContentSize ?? .zero
-    }
-}
-
-extension WLAsyncDisplayLabel: WLAsyncDisplayLayerDelegate {
-    
-    func asyncDisplayLayerWillDisplay(layer: WLAsyncDisplayLayer) {
-        textNode?.textLayout?.removeAttachments()
-    }
-    
-    func asyncDisplayLayer(layer: WLAsyncDisplayLayer?, didDisplayAt context: CGContext, size: CGSize, isCancelld: WLAsyncDisplayIsCanclledBlock) {
-        
-        // 绘制文字内容
-        if let textNode = self.textNode {
-            textNode.textLayout?.drawInContext(context: context, point: textNode.frame.origin, containerView: self, isCancelld: isCancelld)
-        }
-    }
-    
-    func asyncDisplayLayer(layer: WLAsyncDisplayLayer?, didFinishDisplay finished: Bool) {
-        if !finished {
-            textNode?.textLayout?.removeAttachments()
-        }
+        return textNode?.textSuggestSize ?? .zero
     }
     
 }

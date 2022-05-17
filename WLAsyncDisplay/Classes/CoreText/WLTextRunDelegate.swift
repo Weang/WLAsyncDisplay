@@ -16,8 +16,6 @@ class WLTextRunDelegate: NSObject {
     var descent: CGFloat = 0.0
     // 宽度
     var width: CGFloat = 0.0
-    // 高度
-    var height: CGFloat = 0.0
  
     var runDelegate: CTRunDelegate? {
         let extentBuffer = UnsafeMutablePointer<WLTextRunDelegate>.allocate(capacity: 1)
@@ -35,6 +33,5 @@ class WLTextRunDelegate: NSObject {
 
         return CTRunDelegateCreate(&callBacks, extentBuffer)
     }
-
     
 }

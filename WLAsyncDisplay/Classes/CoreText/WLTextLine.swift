@@ -30,8 +30,6 @@ class WLTextLine: NSObject {
     // 字符数组
     var glyphs: [WLTextGlyph] = []
     
-    // line在lines中的位置
-    var index = 0
     // 行数
     var row = 0
     
@@ -42,8 +40,6 @@ class WLTextLine: NSObject {
     
     // 附件信息，包括附件模型、附件索引和附件位置
     var attachments: [WLTextAttachment] = []
-    var attachmentRanges: [NSRange] = []
-    var attachmentRects: [CGRect] = []
     
     init(cTLine: CTLine, lineOrigin: CGPoint) {
         self.cTLine = cTLine
@@ -74,10 +70,7 @@ class WLTextLine: NSObject {
         trailingWhitespaceWidth = CGFloat(CTLineGetTrailingWhitespaceWidth(cTLine))
         
         // 计算实际line在UIKit坐标系的frame
-        frame = CGRect(x: lineOrigin.x + firstGlyphPosition,
-                       y: lineOrigin.y - ascent,
-                       width: lineWidth,
-                       height: ascent + descent)
+        frame = CGRect(x: lineOrigin.x + firstGlyphPosition, y: lineOrigin.y - ascent, width: lineWidth, height: ascent + descent)
         
         // 获取附件和字符数组，计算附件在文本容器中的位置
         let runs = CTLineGetGlyphRuns(cTLine)
@@ -87,8 +80,6 @@ class WLTextLine: NSObject {
         }
         
         var attachments: [WLTextAttachment] = []
-        var attachmentRanges: [NSRange] = []
-        var attachmentRects: [CGRect] = []
         var glyphsArray: [WLTextGlyph] = []
         
         for i in 0..<runCount {
@@ -114,7 +105,7 @@ class WLTextLine: NSObject {
             CTRunGetAdvances(run, CFRangeMake(0, glyphCount), glyphAdvances)
             
             for i in 0..<glyphCount {
-                let glyph = WLTextGlyph.init(glyph: glyphs[i])
+                let glyph = WLTextGlyph(glyph: glyphs[i])
                 glyph.position = glyphPositions[i]
                 glyph.leading = leading;
                 glyph.ascent = ascent;
@@ -137,21 +128,15 @@ class WLTextLine: NSObject {
             let runWidth = CGFloat(CTRunGetTypographicBounds(run, CFRange(location: 0, length: 0), &ascent, &descent, &leading))
             runPosition.x += self.lineOrigin.x
             runPosition.y = self.lineOrigin.y - runPosition.y
-            let runTypoBounds = CGRect(x: runPosition.x,
-                                       y: runPosition.y - ascent,
-                                       width: runWidth,
-                                       height: ascent + descent)
+            let runTypoBounds = CGRect(x: runPosition.x, y: runPosition.y - ascent, width: runWidth, height: ascent + descent)
             
-            
+            attachment.range = range
+            attachment.rect = runTypoBounds
             
             attachments.append(attachment)
-            attachmentRanges.append(range)
-            attachmentRects.append(runTypoBounds)
         }
         
         self.attachments = attachments
-        self.attachmentRanges = attachmentRanges
-        self.attachmentRects = attachmentRects
         self.glyphs = glyphsArray
     }
     

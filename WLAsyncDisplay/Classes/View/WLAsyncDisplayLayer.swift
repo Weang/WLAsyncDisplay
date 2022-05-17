@@ -7,29 +7,21 @@
 
 import UIKit
 
-typealias WLAsyncDisplayIsCanclledBlock = () -> (Bool)
+typealias WLAsyncDisplayIsCanclled = () -> (Bool)
 
-// 异步绘制任务代理
-protocol WLAsyncDisplayLayerDelegate: AnyObject {
-    // 即将要开始绘制
-    func asyncDisplayLayerWillDisplay(layer: WLAsyncDisplayLayer)
-    // 绘制的具体实现
-    func asyncDisplayLayer(layer: WLAsyncDisplayLayer?, didDisplayAt context: CGContext, size: CGSize, isCancelld: WLAsyncDisplayIsCanclledBlock)
-    // 绘制已完成
-    func asyncDisplayLayer(layer: WLAsyncDisplayLayer?, didFinishDisplay finished: Bool)
-}
+fileprivate let displayQueue = DispatchQueue(label: "com.WLAsyncDisplay.WLAsyncDisplayLayer.DisplayQueue")
 
 class WLAsyncDisplayLayer: CALayer {
     
-    static let displayQueue: DispatchQueue = {
-        let displayQueue = DispatchQueue(label: "com.Gallop.LWAsyncDisplayLayer.displayQueue")
-        return displayQueue
-    }()
-    
     // 是否异步绘制，默认是true
     var displaysAsynchronously = true
+    
     // 自增标识类，用于取消绘制
     var displayFlag = WLFlag()
+    
+    var textNode: WLTextNode?
+    
+    weak var contentView: UIView?
     
     override init(layer: Any) {
         super.init(layer: layer)
@@ -64,104 +56,77 @@ class WLAsyncDisplayLayer: CALayer {
     }
     
     func display(asynchronously: Bool) {
-        guard let delegate = self.delegate as? WLAsyncDisplayLayerDelegate else {
-            return
+        contents = nil
+        textNode?.textLayout?.removeAttachments()
+        
+        if bounds.size.width < 1 || bounds.size.height < 1 { return }
+        
+        let size = self.bounds.size
+        let isOpaque = self.isOpaque
+        let contentsScale = self.contentsScale
+        
+        var backgroundColor = UIColor.white.cgColor
+        if let background = self.backgroundColor, background.alpha >= 1 {
+            backgroundColor = background
         }
         
-        contents = nil
+        let contextRect = CGRect(origin: .zero, size: CGSize(width: size.width * contentsScale, height: size.height * contentsScale))
         
         if asynchronously {
-            delegate.asyncDisplayLayerWillDisplay(layer: self)
-            
-            // 自增取消标志位
-            let displayFlag = self.displayFlag
             let value = displayFlag.value
-            let isCancelledBlock: WLAsyncDisplayIsCanclledBlock = {
-                return value != displayFlag.value
+            let isCancelledBlock: WLAsyncDisplayIsCanclled = { [weak self] in
+                return value != self?.displayFlag.value
             }
             
-            let size = bounds.size
-            let opaque = isOpaque
-            let scale = contentsScale
-            var backgroundColor: CGColor = UIColor.white.cgColor
-            if let background = self.backgroundColor,
-               background.alpha >= 1 {
-                backgroundColor = background
-            }
-            
-            // 不满足绘制条件
-            if size.width < 1 || size.height < 1 {
-                self.contents = nil
-                delegate.asyncDisplayLayer(layer: self, didFinishDisplay: true)
-                return
-            }
-            
-            WLAsyncDisplayLayer.displayQueue.async { [weak self] in
-                if isCancelledBlock() {
+            displayQueue.async { [weak self] in
+                UIGraphicsBeginImageContextWithOptions(size, isOpaque, contentsScale)
+                guard let context = UIGraphicsGetCurrentContext() else {
+                    UIGraphicsEndImageContext()
                     return
                 }
                 
-                // 创建content
-                UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
-                guard let context = UIGraphicsGetCurrentContext() else { return }
-                
-                if opaque {
+                if isOpaque {
                     context.saveGState()
                     context.setFillColor(backgroundColor)
-                    context.addRect(CGRect(x: 0, y: 0, width: size.width * scale, height: size.height * scale))
+                    context.addRect(contextRect)
                     context.fillPath()
                     context.restoreGState()
                 }
                 
-                // 通知代理绘制文字
-                delegate.asyncDisplayLayer(layer: self, didDisplayAt: context, size: size, isCancelld: isCancelledBlock)
+                self?.textNode?.textLayout?.drawInContext(context: context, point: .zero, containerView: self?.contentView, isCancelld: isCancelledBlock)
                 
                 if isCancelledBlock() {
                     UIGraphicsEndImageContext()
-                    delegate.asyncDisplayLayer(layer: self, didFinishDisplay: false)
+                    self?.textNode?.textLayout?.removeAttachments()
                     return
                 }
                
-                // 获取绘制contents
                 let image = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
-                
-                // 暂时不使用RunLoop进行主线程绘制
                 DispatchQueue.main.sync { [weak self] in
                     self?.contents = image?.cgImage
                 }
-                
             }
-            
         } else {
-            delegate.asyncDisplayLayerWillDisplay(layer: self)
-            
-            let size = self.bounds.size
             UIGraphicsBeginImageContextWithOptions(size, isOpaque, contentsScale)
-            guard let context = UIGraphicsGetCurrentContext() else { return }
-            
-            var backgroundColor: CGColor = UIColor.white.cgColor
-            if let background = self.backgroundColor,
-               background.alpha >= 1 {
-                backgroundColor = background
+            guard let context = UIGraphicsGetCurrentContext() else {
+                UIGraphicsEndImageContext()
+                return
             }
             
-            if self.isOpaque {
+            if isOpaque {
                 context.saveGState()
                 context.setFillColor(backgroundColor)
-                context.addRect(CGRect(x: 0, y: 0, width: size.width * contentsScale, height: size.height * contentsScale))
+                context.addRect(contextRect)
                 context.fillPath()
                 context.restoreGState()
             }
             
-            // 通知代理绘制文字
-            delegate.asyncDisplayLayer(layer: self, didDisplayAt: context, size: size, isCancelld: { false })
+            textNode?.textLayout?.drawInContext(context: context, point: .zero, containerView: self.contentView, isCancelld: { false })
             
-            // 获取绘制contents
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            self.contents = image?.cgImage
-            delegate.asyncDisplayLayer(layer: self, didFinishDisplay: true)
+            contents = image?.cgImage
         }
     }
     

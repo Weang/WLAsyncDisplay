@@ -7,35 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04CF3790CFA2DFDFCEFAD5DD8A7DFCA9 /* WLTextLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B7D1000E0BF8387898E4116DD5FF /* WLTextLine.swift */; };
-		09D402B5C894DC265DE09F51959B09AC /* WLTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C4FBE7AA8697082F321A3FF478704 /* WLTextHighlight.swift */; };
-		0B958BA074422E20EDACF168817AC24C /* WLAsyncDisplay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F39B22FD60DD90EF4995A6348277FA6 /* WLAsyncDisplay-dummy.m */; };
-		0F2CB0796D581BB9E52632CBA8F661BC /* WLTextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096E52E17F79516CFFF8A4EA01B8A02 /* WLTextLayout.swift */; };
-		1D174ED7BF434C6F75D3E8A401139AB1 /* WLTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8237E9BC640C6A575AA7B3128E805EF5 /* WLTextAttachment.swift */; };
-		2B68E36CBC31CF0CB84F6CFB45FBB435 /* WLTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB7EA829AB6C2B77396598DFB2BC45 /* WLTextNode.swift */; };
-		304E8AABB845EE5A93444D0BC856D9E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		33C28552EB977FF85C6D6847950E6908 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B39EDCE0C7CBC6C14865DF85BC7FC /* NSMutableAttributedString+Highlight.swift */; };
-		341BD972520BAAEBB88FFDC2D60BB533 /* WLTextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB19D40ED4B57FA402B39B63AD7F983 /* WLTextContainer.swift */; };
-		49616951E1FB49CC27A6EFB2F941DC32 /* WLRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584084FC5F6F8BA32D80D222FD02D009 /* WLRegularExpression.swift */; };
-		4EE7B7E5DBE7F5EE6A97CFC3B0E88AD0 /* NSMutableAttributedString+Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0634EAD2CC9799D331928609F78E0DAE /* NSMutableAttributedString+Attachment.swift */; };
-		61F5ECC87F39B9D6E985A5BED877AA01 /* WLTruncationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62119EFFE736EEA3EBF17611F81FF904 /* WLTruncationToken.swift */; };
-		62E5BAE73DE61D19729E0BBEDF6AAED5 /* WLTextGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD4F7284E2B63FD8FA6E9A39F95266 /* WLTextGlyph.swift */; };
-		6925848690E552C58FD7F5C7D2C8F1F5 /* NSMutableAttributedString+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8F1726ED8F0067CD248CC04615F7A /* NSMutableAttributedString+BackgroundColor.swift */; };
-		8A2EFAFDE9B59456BC2778BEA029F2FE /* WLAsyncDisplayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4521D8BC30EB7A8FC94F4E2CE17024 /* WLAsyncDisplayLabel.swift */; };
-		A381E409EE601EC12E01E9DAA1659EA4 /* WLTextRunDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80B704067BAEFE55A456A51AE87F8D /* WLTextRunDelegate.swift */; };
-		B03A73B8F434F590DF56966DD29554B5 /* WLFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4398262DB0252E13C53072FB8B0023B6 /* WLFlag.swift */; };
-		B3A88D10102C63C23DFFECB8BFF157C9 /* Pods-WLAsyncDisplay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE92F94D3EE6E8AD3A5C99EF1267795C /* Pods-WLAsyncDisplay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1E1FD99A2794E5C142A72AA9778B185 /* WLAsyncDisplayLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D144531C1A3B71D0C230462650ECDD0 /* WLAsyncDisplayLayer.swift */; };
-		E3E07197B6328309885D1BBFAB3E2AC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E7AE6C26B1EA9EC6B0B04882FFEC5CAB /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619889A5DEDE60AE60AB2F3734E8979 /* NSMutableAttributedString+Ext.swift */; };
-		F3494C464DA0348BA87B26C402CB7026 /* WLAttributedStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D945597E24F1BCADFF2AB6B7F3026C6 /* WLAttributedStringKeys.swift */; };
-		F7451DF7332F92CFB13D85E14BA11277 /* WLAsyncDisplay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D21A8DB9BCB3C27A678D84964358832F /* WLAsyncDisplay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD19E078889FAADE7C479ECC51847AB9 /* Pods-WLAsyncDisplay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F620C506FFFAE13E6667D81C22731E5 /* Pods-WLAsyncDisplay_Example-dummy.m */; };
-		FF43BD2A9CCEA6D889746FB275C8B545 /* WLTextBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D90A62274F7A4FCDBD35399934741 /* WLTextBackgroundColor.swift */; };
+		1BF7C2E240EA0076BD0D4070038F5548 /* Pods-WLAsyncDisplay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F620C506FFFAE13E6667D81C22731E5 /* Pods-WLAsyncDisplay_Example-dummy.m */; };
+		1E75AD092DA0907462C446E2422435BA /* WLAsyncDisplay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3359775762B941EF70242D13DCEB1449 /* WLAsyncDisplay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26D3FA263CE8D2B33468DD72F60337BD /* WLRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7277D6F2AD17E8D9AD6BBC32C689E85C /* WLRegularExpression.swift */; };
+		2F9DAC96673EEDB62D396F8BEAE7F0FC /* WLFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353F324C45034AEE6BF8845603892E3 /* WLFlag.swift */; };
+		3FD33078B971036FD1C204408EC798B8 /* WLAsyncDisplayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDF1FDB686834DBE01D9EAFD8FB7D1 /* WLAsyncDisplayLabel.swift */; };
+		4B850F6BBCD46F7B35819F65852E7251 /* WLAsyncDisplay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CFACB6CFF2196DD9E6723CF79AEBD /* WLAsyncDisplay-dummy.m */; };
+		58E4A67BC6865481616A29A99CE61262 /* WLAsyncDisplayLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35341032880A16389F65E74B2767B9 /* WLAsyncDisplayLayer.swift */; };
+		5AF9F19C493DC5CBD3E31AA972FF35BA /* Pods-WLAsyncDisplay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE92F94D3EE6E8AD3A5C99EF1267795C /* Pods-WLAsyncDisplay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		758F7424E97EB5E98106EA1D5B6FE965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8180930DCC5F0F3C136BBBFFBC2C7981 /* WLTruncationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669297D77310BD7CC5B324CD56BCF032 /* WLTruncationToken.swift */; };
+		87D4CE9DD434D6CE0A222F3E9000F05D /* WLTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A751A5360596E1B146F20A8AA3C56A00 /* WLTextAttachment.swift */; };
+		8E733C9A71677563F58F5BD516DE314D /* WLTextRunDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9990D5B81C4592F8BE72D43B9BDA0FB7 /* WLTextRunDelegate.swift */; };
+		91A96BB245663878D509F2603F2BA0E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		99B058A8B54DC715BCB16629D65661A4 /* WLTextBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9425AC860EC81050D5E2E3450B9C2 /* WLTextBackgroundColor.swift */; };
+		9C5826BFBB2789B36F16B0576AACCEA0 /* WLTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7022E5D1F0C81F8E4E0548F65AB275A1 /* WLTextHighlight.swift */; };
+		9F36B846AA81A31646514DFE859959F2 /* WLTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CCD91C5CF101DE86F8C597E3D197C /* WLTextNode.swift */; };
+		A5A6D7B21F271A869EC5A9297FA77AEE /* WLTextLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFD618FD967A7DF084CC17DC351081 /* WLTextLine.swift */; };
+		C5F2FDF710C0709297AD3F7F31EC4A4C /* WLTextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D52643E133C0B9820CBF10E68415D8 /* WLTextLayout.swift */; };
+		C6E26709376DD946EBC26393277F3F0E /* WLAttributedStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BF911008FFAE31B3CED80FA2B20129 /* WLAttributedStringKeys.swift */; };
+		D0884A26229B4B0219088A91CCAC4162 /* WLTextGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C5974615CE93C5983E254B96229922 /* WLTextGlyph.swift */; };
+		EFD59E6FFB62B50B5C3D0B2C47D4682C /* WLTextAttachmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C890AE505142AFDEA69EFF1E212EB /* WLTextAttachmentType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52C05A55546885C434209D756BE10ACC /* PBXContainerItemProxy */ = {
+		33BDC2475AFE3E5FFA898BA504EE042D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -45,106 +41,89 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0353F324C45034AEE6BF8845603892E3 /* WLFlag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLFlag.swift; sourceTree = "<group>"; };
 		0602745899DCDCEC2481FD19BF56FB45 /* Pods-WLAsyncDisplay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAsyncDisplay_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0634EAD2CC9799D331928609F78E0DAE /* NSMutableAttributedString+Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Attachment.swift"; sourceTree = "<group>"; };
-		0ED8F1726ED8F0067CD248CC04615F7A /* NSMutableAttributedString+BackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BackgroundColor.swift"; sourceTree = "<group>"; };
-		0F39B22FD60DD90EF4995A6348277FA6 /* WLAsyncDisplay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WLAsyncDisplay-dummy.m"; sourceTree = "<group>"; };
+		12D52643E133C0B9820CBF10E68415D8 /* WLTextLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextLayout.swift; sourceTree = "<group>"; };
 		1618A888A767083C7ED6EC111949B117 /* Pods-WLAsyncDisplay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WLAsyncDisplay_Example.modulemap"; sourceTree = "<group>"; };
-		1BB19D40ED4B57FA402B39B63AD7F983 /* WLTextContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextContainer.swift; sourceTree = "<group>"; };
+		17BF911008FFAE31B3CED80FA2B20129 /* WLAttributedStringKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAttributedStringKeys.swift; sourceTree = "<group>"; };
 		1F620C506FFFAE13E6667D81C22731E5 /* Pods-WLAsyncDisplay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WLAsyncDisplay_Example-dummy.m"; sourceTree = "<group>"; };
-		2DDB7EA829AB6C2B77396598DFB2BC45 /* WLTextNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextNode.swift; sourceTree = "<group>"; };
-		2F7BAF31D69D1355CB134CA4582CB7E5 /* WLAsyncDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAsyncDisplay.release.xcconfig; sourceTree = "<group>"; };
+		225F2D494349569E0D7A56E20D1DB66D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2EDDF1FDB686834DBE01D9EAFD8FB7D1 /* WLAsyncDisplayLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAsyncDisplayLabel.swift; sourceTree = "<group>"; };
+		3359775762B941EF70242D13DCEB1449 /* WLAsyncDisplay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAsyncDisplay-umbrella.h"; sourceTree = "<group>"; };
 		33B4D63578BDC678689DF9AB67914749 /* Pods-WLAsyncDisplay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WLAsyncDisplay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3B4521D8BC30EB7A8FC94F4E2CE17024 /* WLAsyncDisplayLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAsyncDisplayLabel.swift; sourceTree = "<group>"; };
-		4398262DB0252E13C53072FB8B0023B6 /* WLFlag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLFlag.swift; sourceTree = "<group>"; };
-		4C4B39EDCE0C7CBC6C14865DF85BC7FC /* NSMutableAttributedString+Highlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Highlight.swift"; sourceTree = "<group>"; };
-		5096E52E17F79516CFFF8A4EA01B8A02 /* WLTextLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextLayout.swift; sourceTree = "<group>"; };
-		5587CE85606063FD7E61DF96B02F88AE /* WLAsyncDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAsyncDisplay.debug.xcconfig; sourceTree = "<group>"; };
-		55CC3DED6A95966B38A2FD97D5A6F3B4 /* WLAsyncDisplay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WLAsyncDisplay.modulemap; sourceTree = "<group>"; };
-		56E1166A8D80E629DADE15230DC349F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		584084FC5F6F8BA32D80D222FD02D009 /* WLRegularExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLRegularExpression.swift; sourceTree = "<group>"; };
-		5C6C4FBE7AA8697082F321A3FF478704 /* WLTextHighlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextHighlight.swift; sourceTree = "<group>"; };
-		5CF1B7D1000E0BF8387898E4116DD5FF /* WLTextLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextLine.swift; sourceTree = "<group>"; };
-		5D945597E24F1BCADFF2AB6B7F3026C6 /* WLAttributedStringKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAttributedStringKeys.swift; sourceTree = "<group>"; };
-		62119EFFE736EEA3EBF17611F81FF904 /* WLTruncationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTruncationToken.swift; sourceTree = "<group>"; };
-		6E80B704067BAEFE55A456A51AE87F8D /* WLTextRunDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextRunDelegate.swift; sourceTree = "<group>"; };
+		3F180EF8E27FA0356A26C1F53DE6EBD3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3F35341032880A16389F65E74B2767B9 /* WLAsyncDisplayLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAsyncDisplayLayer.swift; sourceTree = "<group>"; };
+		510CCD91C5CF101DE86F8C597E3D197C /* WLTextNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextNode.swift; sourceTree = "<group>"; };
+		5A2CFACB6CFF2196DD9E6723CF79AEBD /* WLAsyncDisplay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WLAsyncDisplay-dummy.m"; sourceTree = "<group>"; };
+		669297D77310BD7CC5B324CD56BCF032 /* WLTruncationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTruncationToken.swift; sourceTree = "<group>"; };
+		7022E5D1F0C81F8E4E0548F65AB275A1 /* WLTextHighlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextHighlight.swift; sourceTree = "<group>"; };
+		7277D6F2AD17E8D9AD6BBC32C689E85C /* WLRegularExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLRegularExpression.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7ECD4F7284E2B63FD8FA6E9A39F95266 /* WLTextGlyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextGlyph.swift; sourceTree = "<group>"; };
+		730DE51ACD0A5024427850581D06685D /* WLAsyncDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAsyncDisplay.release.xcconfig; sourceTree = "<group>"; };
+		7665A2C8555776B5E791EBDEA6481278 /* WLAsyncDisplay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAsyncDisplay-prefix.pch"; sourceTree = "<group>"; };
 		81AD64979147EAE35538BE0138FCE6FF /* Pods-WLAsyncDisplay_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAsyncDisplay_Example-Info.plist"; sourceTree = "<group>"; };
-		8237E9BC640C6A575AA7B3128E805EF5 /* WLTextAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextAttachment.swift; sourceTree = "<group>"; };
-		8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WLAsyncDisplay.framework; path = WLAsyncDisplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C5974615CE93C5983E254B96229922 /* WLTextGlyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextGlyph.swift; sourceTree = "<group>"; };
+		8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WLAsyncDisplay; path = WLAsyncDisplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B477DF37FA23FEDAF767BA935047FCA /* Pods-WLAsyncDisplay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WLAsyncDisplay_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8D144531C1A3B71D0C230462650ECDD0 /* WLAsyncDisplayLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLAsyncDisplayLayer.swift; sourceTree = "<group>"; };
-		903D90A62274F7A4FCDBD35399934741 /* WLTextBackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextBackgroundColor.swift; sourceTree = "<group>"; };
+		93D5A67E692DBC5173D2480CAC86EFDE /* WLAsyncDisplay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WLAsyncDisplay.modulemap; sourceTree = "<group>"; };
+		9990D5B81C4592F8BE72D43B9BDA0FB7 /* WLTextRunDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextRunDelegate.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A619889A5DEDE60AE60AB2F3734E8979 /* NSMutableAttributedString+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ext.swift"; sourceTree = "<group>"; };
-		AC183ADD8D973DFE05A23DAE6EEE89CD /* WLAsyncDisplay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WLAsyncDisplay-Info.plist"; sourceTree = "<group>"; };
-		BCB212FC33E24F5F6581725255A86BF8 /* Pods_WLAsyncDisplay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WLAsyncDisplay_Example.framework; path = "Pods-WLAsyncDisplay_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A751A5360596E1B146F20A8AA3C56A00 /* WLTextAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextAttachment.swift; sourceTree = "<group>"; };
+		B87C890AE505142AFDEA69EFF1E212EB /* WLTextAttachmentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextAttachmentType.swift; sourceTree = "<group>"; };
+		BBB9425AC860EC81050D5E2E3450B9C2 /* WLTextBackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextBackgroundColor.swift; sourceTree = "<group>"; };
+		BCB212FC33E24F5F6581725255A86BF8 /* Pods-WLAsyncDisplay_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WLAsyncDisplay_Example"; path = Pods_WLAsyncDisplay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCFD618FD967A7DF084CC17DC351081 /* WLTextLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WLTextLine.swift; sourceTree = "<group>"; };
 		CC6584C1C7CFBB58D9345F21B5B36008 /* Pods-WLAsyncDisplay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WLAsyncDisplay_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D21A8DB9BCB3C27A678D84964358832F /* WLAsyncDisplay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAsyncDisplay-umbrella.h"; sourceTree = "<group>"; };
-		E811DA1B00916D9B08C6B77581A51F24 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		EA1B7B79AB8836BE132ED8487D69A18C /* WLAsyncDisplay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WLAsyncDisplay-prefix.pch"; sourceTree = "<group>"; };
+		D4E8A0AE1CFBF4054EEC4D7BE75CA2DE /* WLAsyncDisplay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WLAsyncDisplay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ED9C81FB0B6751114930339FDD2AE868 /* WLAsyncDisplay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WLAsyncDisplay-Info.plist"; sourceTree = "<group>"; };
 		F6DD8028FAB5072A1B22964831C9D3DD /* Pods-WLAsyncDisplay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WLAsyncDisplay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FA934F7F459A672525F8F69035B696D5 /* WLAsyncDisplay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WLAsyncDisplay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F7CDE69B4DE277B9FDFD750657236B0C /* WLAsyncDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WLAsyncDisplay.debug.xcconfig; sourceTree = "<group>"; };
 		FE92F94D3EE6E8AD3A5C99EF1267795C /* Pods-WLAsyncDisplay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WLAsyncDisplay_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BD0ADD68EF69DCC5854F0D821C52706 /* Frameworks */ = {
+		750A0B3F0450E8000F6053E5FA3BCDDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304E8AABB845EE5A93444D0BC856D9E3 /* Foundation.framework in Frameworks */,
+				758F7424E97EB5E98106EA1D5B6FE965 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E697BDFDE0EC288B31892B7152FA22BC /* Frameworks */ = {
+		EFFB9EB9308922D8CD4F7F0192FFF121 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E07197B6328309885D1BBFAB3E2AC6 /* Foundation.framework in Frameworks */,
+				91A96BB245663878D509F2603F2BA0E3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AFE237242DBC50C62386785190E29EC /* Node */ = {
+		16259527347F431CD45D24122A183E3A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2DDB7EA829AB6C2B77396598DFB2BC45 /* WLTextNode.swift */,
+				0353F324C45034AEE6BF8845603892E3 /* WLFlag.swift */,
+				7277D6F2AD17E8D9AD6BBC32C689E85C /* WLRegularExpression.swift */,
 			);
-			name = Node;
-			path = WLAsyncDisplay/Classes/Node;
+			name = Utils;
+			path = WLAsyncDisplay/Classes/Utils;
 			sourceTree = "<group>";
 		};
-		180EE9B33737509140E2A61429642668 /* View */ = {
+		33B4F1D863F921CB4D8E5BD75F01876A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B4521D8BC30EB7A8FC94F4E2CE17024 /* WLAsyncDisplayLabel.swift */,
-				8D144531C1A3B71D0C230462650ECDD0 /* WLAsyncDisplayLayer.swift */,
+				93D5A67E692DBC5173D2480CAC86EFDE /* WLAsyncDisplay.modulemap */,
+				5A2CFACB6CFF2196DD9E6723CF79AEBD /* WLAsyncDisplay-dummy.m */,
+				ED9C81FB0B6751114930339FDD2AE868 /* WLAsyncDisplay-Info.plist */,
+				7665A2C8555776B5E791EBDEA6481278 /* WLAsyncDisplay-prefix.pch */,
+				3359775762B941EF70242D13DCEB1449 /* WLAsyncDisplay-umbrella.h */,
+				F7CDE69B4DE277B9FDFD750657236B0C /* WLAsyncDisplay.debug.xcconfig */,
+				730DE51ACD0A5024427850581D06685D /* WLAsyncDisplay.release.xcconfig */,
 			);
-			name = View;
-			path = WLAsyncDisplay/Classes/View;
-			sourceTree = "<group>";
-		};
-		38B17BCEC796CC2C0D3C0989C91F3EB0 /* CoreText */ = {
-			isa = PBXGroup;
-			children = (
-				5D945597E24F1BCADFF2AB6B7F3026C6 /* WLAttributedStringKeys.swift */,
-				8237E9BC640C6A575AA7B3128E805EF5 /* WLTextAttachment.swift */,
-				903D90A62274F7A4FCDBD35399934741 /* WLTextBackgroundColor.swift */,
-				1BB19D40ED4B57FA402B39B63AD7F983 /* WLTextContainer.swift */,
-				7ECD4F7284E2B63FD8FA6E9A39F95266 /* WLTextGlyph.swift */,
-				5C6C4FBE7AA8697082F321A3FF478704 /* WLTextHighlight.swift */,
-				5096E52E17F79516CFFF8A4EA01B8A02 /* WLTextLayout.swift */,
-				5CF1B7D1000E0BF8387898E4116DD5FF /* WLTextLine.swift */,
-				6E80B704067BAEFE55A456A51AE87F8D /* WLTextRunDelegate.swift */,
-				62119EFFE736EEA3EBF17611F81FF904 /* WLTruncationToken.swift */,
-				643A8AC3100FA871AD4E48446B0C4215 /* Extension */,
-			);
-			name = CoreText;
-			path = WLAsyncDisplay/Classes/CoreText;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WLAsyncDisplay";
 			sourceTree = "<group>";
 		};
 		4594A40FC30421CE232217293F22A275 /* Targets Support Files */ = {
@@ -180,77 +159,46 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5AC45D367C5C5CA39093376AC056D74A /* Support Files */ = {
+		922827E51119E99C9DC69ADF3D85CB7F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55CC3DED6A95966B38A2FD97D5A6F3B4 /* WLAsyncDisplay.modulemap */,
-				0F39B22FD60DD90EF4995A6348277FA6 /* WLAsyncDisplay-dummy.m */,
-				AC183ADD8D973DFE05A23DAE6EEE89CD /* WLAsyncDisplay-Info.plist */,
-				EA1B7B79AB8836BE132ED8487D69A18C /* WLAsyncDisplay-prefix.pch */,
-				D21A8DB9BCB3C27A678D84964358832F /* WLAsyncDisplay-umbrella.h */,
-				5587CE85606063FD7E61DF96B02F88AE /* WLAsyncDisplay.debug.xcconfig */,
-				2F7BAF31D69D1355CB134CA4582CB7E5 /* WLAsyncDisplay.release.xcconfig */,
+				2EDDF1FDB686834DBE01D9EAFD8FB7D1 /* WLAsyncDisplayLabel.swift */,
+				3F35341032880A16389F65E74B2767B9 /* WLAsyncDisplayLayer.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WLAsyncDisplay";
+			name = View;
+			path = WLAsyncDisplay/Classes/View;
 			sourceTree = "<group>";
 		};
-		643A8AC3100FA871AD4E48446B0C4215 /* Extension */ = {
+		A2E4C7DAAFEFC86448516A51A16AC888 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0634EAD2CC9799D331928609F78E0DAE /* NSMutableAttributedString+Attachment.swift */,
-				0ED8F1726ED8F0067CD248CC04615F7A /* NSMutableAttributedString+BackgroundColor.swift */,
-				A619889A5DEDE60AE60AB2F3734E8979 /* NSMutableAttributedString+Ext.swift */,
-				4C4B39EDCE0C7CBC6C14865DF85BC7FC /* NSMutableAttributedString+Highlight.swift */,
-			);
-			name = Extension;
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		672A9B6E3D1D236F2A4294EC59361596 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				56E1166A8D80E629DADE15230DC349F9 /* LICENSE */,
-				E811DA1B00916D9B08C6B77581A51F24 /* README.md */,
-				FA934F7F459A672525F8F69035B696D5 /* WLAsyncDisplay.podspec */,
+				225F2D494349569E0D7A56E20D1DB66D /* LICENSE */,
+				3F180EF8E27FA0356A26C1F53DE6EBD3 /* README.md */,
+				D4E8A0AE1CFBF4054EEC4D7BE75CA2DE /* WLAsyncDisplay.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		75C4E28CD4A753349777A96B7797AD5F /* Utils */ = {
+		B98984E5EFE3ABB10A6CA6A7AA2927C9 /* WLAsyncDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				4398262DB0252E13C53072FB8B0023B6 /* WLFlag.swift */,
-				584084FC5F6F8BA32D80D222FD02D009 /* WLRegularExpression.swift */,
+				E7C8A5B04AB553F1BA6FD38046083C2C /* CoreText */,
+				A2E4C7DAAFEFC86448516A51A16AC888 /* Pod */,
+				33B4F1D863F921CB4D8E5BD75F01876A /* Support Files */,
+				16259527347F431CD45D24122A183E3A /* Utils */,
+				922827E51119E99C9DC69ADF3D85CB7F /* View */,
 			);
-			name = Utils;
-			path = WLAsyncDisplay/Classes/Utils;
-			sourceTree = "<group>";
-		};
-		8C31B2D484C65C4AEA470CF2791779F0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F6AC0C74CC15A57CA29271D35C580F2A /* WLAsyncDisplay */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		AE6F6F4906E3D8CF6C766F9A9EF63140 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BCB212FC33E24F5F6581725255A86BF8 /* Pods_WLAsyncDisplay_Example.framework */,
-				8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay.framework */,
-			);
-			name = Products;
+			name = WLAsyncDisplay;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8C31B2D484C65C4AEA470CF2791779F0 /* Development Pods */,
+				F1CFC77D2EA0A79A0C8C4966E0B35E13 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				AE6F6F4906E3D8CF6C766F9A9EF63140 /* Products */,
+				FA6BAC575CD3F5B11D4D60A6564D9539 /* Products */,
 				4594A40FC30421CE232217293F22A275 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -263,36 +211,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F6AC0C74CC15A57CA29271D35C580F2A /* WLAsyncDisplay */ = {
+		E7C8A5B04AB553F1BA6FD38046083C2C /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
-				38B17BCEC796CC2C0D3C0989C91F3EB0 /* CoreText */,
-				0AFE237242DBC50C62386785190E29EC /* Node */,
-				672A9B6E3D1D236F2A4294EC59361596 /* Pod */,
-				5AC45D367C5C5CA39093376AC056D74A /* Support Files */,
-				75C4E28CD4A753349777A96B7797AD5F /* Utils */,
-				180EE9B33737509140E2A61429642668 /* View */,
+				17BF911008FFAE31B3CED80FA2B20129 /* WLAttributedStringKeys.swift */,
+				A751A5360596E1B146F20A8AA3C56A00 /* WLTextAttachment.swift */,
+				B87C890AE505142AFDEA69EFF1E212EB /* WLTextAttachmentType.swift */,
+				BBB9425AC860EC81050D5E2E3450B9C2 /* WLTextBackgroundColor.swift */,
+				83C5974615CE93C5983E254B96229922 /* WLTextGlyph.swift */,
+				7022E5D1F0C81F8E4E0548F65AB275A1 /* WLTextHighlight.swift */,
+				12D52643E133C0B9820CBF10E68415D8 /* WLTextLayout.swift */,
+				BCCFD618FD967A7DF084CC17DC351081 /* WLTextLine.swift */,
+				510CCD91C5CF101DE86F8C597E3D197C /* WLTextNode.swift */,
+				9990D5B81C4592F8BE72D43B9BDA0FB7 /* WLTextRunDelegate.swift */,
+				669297D77310BD7CC5B324CD56BCF032 /* WLTruncationToken.swift */,
 			);
-			name = WLAsyncDisplay;
-			path = ../..;
+			name = CoreText;
+			path = WLAsyncDisplay/Classes/CoreText;
+			sourceTree = "<group>";
+		};
+		F1CFC77D2EA0A79A0C8C4966E0B35E13 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B98984E5EFE3ABB10A6CA6A7AA2927C9 /* WLAsyncDisplay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FA6BAC575CD3F5B11D4D60A6564D9539 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCB212FC33E24F5F6581725255A86BF8 /* Pods-WLAsyncDisplay_Example */,
+				8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DF121BF3D544ADA6DEF317455640E96E /* Headers */ = {
+		3DBB3C4400394D4155D8D735475D6401 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A88D10102C63C23DFFECB8BFF157C9 /* Pods-WLAsyncDisplay_Example-umbrella.h in Headers */,
+				5AF9F19C493DC5CBD3E31AA972FF35BA /* Pods-WLAsyncDisplay_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E41C29ED5A187ECD2FB30B576486330A /* Headers */ = {
+		707BD6FDFBEC6C1DCD217A1AF6CE2CA8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7451DF7332F92CFB13D85E14BA11277 /* WLAsyncDisplay-umbrella.h in Headers */,
+				1E75AD092DA0907462C446E2422435BA /* WLAsyncDisplay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,31 +271,31 @@
 /* Begin PBXNativeTarget section */
 		B911D20DB94FB7796FD30E982D3DF596 /* Pods-WLAsyncDisplay_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E902FD8DE57919666EC00C5EAEDA4CF /* Build configuration list for PBXNativeTarget "Pods-WLAsyncDisplay_Example" */;
+			buildConfigurationList = 1FBD038860605D8CFFB8FD60277E5069 /* Build configuration list for PBXNativeTarget "Pods-WLAsyncDisplay_Example" */;
 			buildPhases = (
-				DF121BF3D544ADA6DEF317455640E96E /* Headers */,
-				1768D1612C8820A431DA354C54F9810A /* Sources */,
-				0BD0ADD68EF69DCC5854F0D821C52706 /* Frameworks */,
-				DEF7A39E93952FF758C9EB5827F530E0 /* Resources */,
+				3DBB3C4400394D4155D8D735475D6401 /* Headers */,
+				485B9F0B91754A1AA6D2DDF576662CD7 /* Sources */,
+				EFFB9EB9308922D8CD4F7F0192FFF121 /* Frameworks */,
+				36DFDAA374D83B84DDCAD92E6C926DA3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				555E7D5BA355727ACFFAB402048B4A3C /* PBXTargetDependency */,
+				F021BF73D043808C46757E36212F7775 /* PBXTargetDependency */,
 			);
 			name = "Pods-WLAsyncDisplay_Example";
-			productName = "Pods-WLAsyncDisplay_Example";
-			productReference = BCB212FC33E24F5F6581725255A86BF8 /* Pods_WLAsyncDisplay_Example.framework */;
+			productName = Pods_WLAsyncDisplay_Example;
+			productReference = BCB212FC33E24F5F6581725255A86BF8 /* Pods-WLAsyncDisplay_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4CCAD59CC39960CD3598332C49BC0E7 /* WLAsyncDisplay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A33C3DCBCD5CCBD47D0EEF339C6BF398 /* Build configuration list for PBXNativeTarget "WLAsyncDisplay" */;
+			buildConfigurationList = A80756967E940638296FBCD8E1AEF066 /* Build configuration list for PBXNativeTarget "WLAsyncDisplay" */;
 			buildPhases = (
-				E41C29ED5A187ECD2FB30B576486330A /* Headers */,
-				DEA2F3FCBEE5C383CDEDB266B3BF4378 /* Sources */,
-				E697BDFDE0EC288B31892B7152FA22BC /* Frameworks */,
-				274BFD0D50F0A541C240B59C0B0890C0 /* Resources */,
+				707BD6FDFBEC6C1DCD217A1AF6CE2CA8 /* Headers */,
+				4DA35C149A3D4B139A0DCE7612591B78 /* Sources */,
+				750A0B3F0450E8000F6053E5FA3BCDDB /* Frameworks */,
+				C97FB8534121CE03362EB37B2DAA5ED9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -333,7 +303,7 @@
 			);
 			name = WLAsyncDisplay;
 			productName = WLAsyncDisplay;
-			productReference = 8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay.framework */;
+			productReference = 8446BC93C624D876893B0E94870F0F36 /* WLAsyncDisplay */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -342,19 +312,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AE6F6F4906E3D8CF6C766F9A9EF63140 /* Products */;
+			productRefGroup = FA6BAC575CD3F5B11D4D60A6564D9539 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -365,14 +335,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		274BFD0D50F0A541C240B59C0B0890C0 /* Resources */ = {
+		36DFDAA374D83B84DDCAD92E6C926DA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEF7A39E93952FF758C9EB5827F530E0 /* Resources */ = {
+		C97FB8534121CE03362EB37B2DAA5ED9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,56 +352,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1768D1612C8820A431DA354C54F9810A /* Sources */ = {
+		485B9F0B91754A1AA6D2DDF576662CD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD19E078889FAADE7C479ECC51847AB9 /* Pods-WLAsyncDisplay_Example-dummy.m in Sources */,
+				1BF7C2E240EA0076BD0D4070038F5548 /* Pods-WLAsyncDisplay_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEA2F3FCBEE5C383CDEDB266B3BF4378 /* Sources */ = {
+		4DA35C149A3D4B139A0DCE7612591B78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE7B7E5DBE7F5EE6A97CFC3B0E88AD0 /* NSMutableAttributedString+Attachment.swift in Sources */,
-				6925848690E552C58FD7F5C7D2C8F1F5 /* NSMutableAttributedString+BackgroundColor.swift in Sources */,
-				E7AE6C26B1EA9EC6B0B04882FFEC5CAB /* NSMutableAttributedString+Ext.swift in Sources */,
-				33C28552EB977FF85C6D6847950E6908 /* NSMutableAttributedString+Highlight.swift in Sources */,
-				0B958BA074422E20EDACF168817AC24C /* WLAsyncDisplay-dummy.m in Sources */,
-				8A2EFAFDE9B59456BC2778BEA029F2FE /* WLAsyncDisplayLabel.swift in Sources */,
-				E1E1FD99A2794E5C142A72AA9778B185 /* WLAsyncDisplayLayer.swift in Sources */,
-				F3494C464DA0348BA87B26C402CB7026 /* WLAttributedStringKeys.swift in Sources */,
-				B03A73B8F434F590DF56966DD29554B5 /* WLFlag.swift in Sources */,
-				49616951E1FB49CC27A6EFB2F941DC32 /* WLRegularExpression.swift in Sources */,
-				1D174ED7BF434C6F75D3E8A401139AB1 /* WLTextAttachment.swift in Sources */,
-				FF43BD2A9CCEA6D889746FB275C8B545 /* WLTextBackgroundColor.swift in Sources */,
-				341BD972520BAAEBB88FFDC2D60BB533 /* WLTextContainer.swift in Sources */,
-				62E5BAE73DE61D19729E0BBEDF6AAED5 /* WLTextGlyph.swift in Sources */,
-				09D402B5C894DC265DE09F51959B09AC /* WLTextHighlight.swift in Sources */,
-				0F2CB0796D581BB9E52632CBA8F661BC /* WLTextLayout.swift in Sources */,
-				04CF3790CFA2DFDFCEFAD5DD8A7DFCA9 /* WLTextLine.swift in Sources */,
-				2B68E36CBC31CF0CB84F6CFB45FBB435 /* WLTextNode.swift in Sources */,
-				A381E409EE601EC12E01E9DAA1659EA4 /* WLTextRunDelegate.swift in Sources */,
-				61F5ECC87F39B9D6E985A5BED877AA01 /* WLTruncationToken.swift in Sources */,
+				4B850F6BBCD46F7B35819F65852E7251 /* WLAsyncDisplay-dummy.m in Sources */,
+				3FD33078B971036FD1C204408EC798B8 /* WLAsyncDisplayLabel.swift in Sources */,
+				58E4A67BC6865481616A29A99CE61262 /* WLAsyncDisplayLayer.swift in Sources */,
+				C6E26709376DD946EBC26393277F3F0E /* WLAttributedStringKeys.swift in Sources */,
+				2F9DAC96673EEDB62D396F8BEAE7F0FC /* WLFlag.swift in Sources */,
+				26D3FA263CE8D2B33468DD72F60337BD /* WLRegularExpression.swift in Sources */,
+				87D4CE9DD434D6CE0A222F3E9000F05D /* WLTextAttachment.swift in Sources */,
+				EFD59E6FFB62B50B5C3D0B2C47D4682C /* WLTextAttachmentType.swift in Sources */,
+				99B058A8B54DC715BCB16629D65661A4 /* WLTextBackgroundColor.swift in Sources */,
+				D0884A26229B4B0219088A91CCAC4162 /* WLTextGlyph.swift in Sources */,
+				9C5826BFBB2789B36F16B0576AACCEA0 /* WLTextHighlight.swift in Sources */,
+				C5F2FDF710C0709297AD3F7F31EC4A4C /* WLTextLayout.swift in Sources */,
+				A5A6D7B21F271A869EC5A9297FA77AEE /* WLTextLine.swift in Sources */,
+				9F36B846AA81A31646514DFE859959F2 /* WLTextNode.swift in Sources */,
+				8E733C9A71677563F58F5BD516DE314D /* WLTextRunDelegate.swift in Sources */,
+				8180930DCC5F0F3C136BBBFFBC2C7981 /* WLTruncationToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		555E7D5BA355727ACFFAB402048B4A3C /* PBXTargetDependency */ = {
+		F021BF73D043808C46757E36212F7775 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WLAsyncDisplay;
 			target = C4CCAD59CC39960CD3598332C49BC0E7 /* WLAsyncDisplay */;
-			targetProxy = 52C05A55546885C434209D756BE10ACC /* PBXContainerItemProxy */;
+			targetProxy = 33BDC2475AFE3E5FFA898BA504EE042D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		255217CB243A69D9330A507E43C37CB2 /* Release */ = {
+		19620DB4A3F1FD527356FC2ED53709EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F7BAF31D69D1355CB134CA4582CB7E5 /* WLAsyncDisplay.release.xcconfig */;
+			baseConfigurationReference = 730DE51ACD0A5024427850581D06685D /* WLAsyncDisplay.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -453,6 +419,39 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CDC02663B3D2947A5F5FC03B57104B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6584C1C7CFBB58D9345F21B5B36008 /* Pods-WLAsyncDisplay_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WLAsyncDisplay_Example/Pods-WLAsyncDisplay_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WLAsyncDisplay_Example/Pods-WLAsyncDisplay_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -526,9 +525,9 @@
 			};
 			name = Debug;
 		};
-		468D0CDA0EC523780322E0F48209871F /* Release */ = {
+		63CED5074E34C318B7DF1CC61122D289 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC6584C1C7CFBB58D9345F21B5B36008 /* Pods-WLAsyncDisplay_Example.release.xcconfig */;
+			baseConfigurationReference = 0602745899DCDCEC2481FD19BF56FB45 /* Pods-WLAsyncDisplay_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -552,37 +551,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7D4B326A4EFADD39106C483290473789 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5587CE85606063FD7E61DF96B02F88AE /* WLAsyncDisplay.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay.modulemap";
-				PRODUCT_MODULE_NAME = WLAsyncDisplay;
-				PRODUCT_NAME = WLAsyncDisplay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -651,11 +619,10 @@
 			};
 			name = Release;
 		};
-		EDFF96EF2F1245CF788176EC4C870B50 /* Debug */ = {
+		E6B45A7CC0DCEDBF03FA1A186CE2BCD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0602745899DCDCEC2481FD19BF56FB45 /* Pods-WLAsyncDisplay_Example.debug.xcconfig */;
+			baseConfigurationReference = F7CDE69B4DE277B9FDFD750657236B0C /* WLAsyncDisplay.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -664,19 +631,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WLAsyncDisplay_Example/Pods-WLAsyncDisplay_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WLAsyncDisplay_Example/Pods-WLAsyncDisplay_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/WLAsyncDisplay/WLAsyncDisplay.modulemap";
+				PRODUCT_MODULE_NAME = WLAsyncDisplay;
+				PRODUCT_NAME = WLAsyncDisplay;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -686,11 +652,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E902FD8DE57919666EC00C5EAEDA4CF /* Build configuration list for PBXNativeTarget "Pods-WLAsyncDisplay_Example" */ = {
+		1FBD038860605D8CFFB8FD60277E5069 /* Build configuration list for PBXNativeTarget "Pods-WLAsyncDisplay_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDFF96EF2F1245CF788176EC4C870B50 /* Debug */,
-				468D0CDA0EC523780322E0F48209871F /* Release */,
+				63CED5074E34C318B7DF1CC61122D289 /* Debug */,
+				1CDC02663B3D2947A5F5FC03B57104B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -704,11 +670,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A33C3DCBCD5CCBD47D0EEF339C6BF398 /* Build configuration list for PBXNativeTarget "WLAsyncDisplay" */ = {
+		A80756967E940638296FBCD8E1AEF066 /* Build configuration list for PBXNativeTarget "WLAsyncDisplay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D4B326A4EFADD39106C483290473789 /* Debug */,
-				255217CB243A69D9330A507E43C37CB2 /* Release */,
+				E6B45A7CC0DCEDBF03FA1A186CE2BCD4 /* Debug */,
+				19620DB4A3F1FD527356FC2ED53709EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
