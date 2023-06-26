@@ -16,6 +16,9 @@ public class WLTextLayout: NSObject {
     // 通过CoreText方法计算出的建议文本大小，宽度为WLTextNode中定义的width
     var suggestSize: CGSize = .zero
     
+    // 通过CoreText方法计算出的实际显示的文字大小
+    var actualSize: CGSize = .zero
+    
     // 包含每个CTLine的最小的位置信息，就是实际的绘制大小
     var textBoundingRect: CGRect = .zero
     

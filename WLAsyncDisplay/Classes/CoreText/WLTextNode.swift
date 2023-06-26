@@ -22,6 +22,13 @@ public class WLTextNode: NSObject {
         return textLayout.suggestSize
     }
     
+    public var textActualSize: CGSize {
+        guard let textLayout = self.textLayout else {
+            return .zero
+        }
+        return textLayout.textBoundingRect.size
+    }
+    
     public var text: String? {
         set {
             guard let text = newValue else {
