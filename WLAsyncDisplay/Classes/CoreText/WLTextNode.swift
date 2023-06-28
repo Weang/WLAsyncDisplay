@@ -22,11 +22,18 @@ public class WLTextNode: NSObject {
         return textLayout.suggestSize
     }
     
-    public var textActualSize: CGSize {
+    public var textBoundingRect: CGSize {
         guard let textLayout = self.textLayout else {
             return .zero
         }
         return textLayout.textBoundingRect.size
+    }
+    
+    public var textLineFrames: [CGRect] {
+        guard let textLayout = self.textLayout else {
+            return []
+        }
+        return textLayout.textLineFrames
     }
     
     public var text: String? {
